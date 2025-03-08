@@ -1,5 +1,5 @@
 import { TelegramClient } from 'telegram';
-import { StringSession } from 'telegram/sessions';
+import { StringSession } from 'telegram/sessions/index.js'; // Updated import
 import { Api } from 'telegram/tl';
 
 const apiId = parseInt(process.env.TELEGRAM_API_ID);
