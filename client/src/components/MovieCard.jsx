@@ -1,4 +1,4 @@
-import { LazyLoadImage } from 'react-lazy-load-image-component';
+import { LazyLoadImage } from 'react-lazy-load-image-component/src/LazyLoadImage'; // Correct import
 import { Link } from 'react-router-dom';
 
 export default function MovieCard({ movie }) {
@@ -12,9 +12,10 @@ export default function MovieCard({ movie }) {
         alt={movie.Title}
         className="w-full h-64 object-cover"
         effect="opacity"
+        threshold={100}
       />
       <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent p-4 flex items-end">
-        <h3 className="text-white font-bold text-lg">{movie.Title}</h3>
+        <h3 className="text-white font-bold text-lg truncate">{movie.Title}</h3>
       </div>
     </Link>
   );
